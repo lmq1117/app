@@ -71,3 +71,15 @@ php artisan migrate:install
 php artisan migrate
 ```
 visit http://localhost and http://localhost/hello/debug
+
+## 引入debugbar
+```php
+// 首先 引入依赖
+composer require barryvdh/laravel-debugbar
+## 然后在 config/app.php中添加服务提供者
+    'providers' => ServiceProvider::defaultProviders()->merge([
+        // ... 服务提供者列表
+        Barryvdh\Debugbar\ServiceProvider::class,
+    ])->toArray(),
+
+```
