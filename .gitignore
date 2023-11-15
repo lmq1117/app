@@ -21,4 +21,5 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .idea/
+public/i.php
 .phpunit.result.cache
