@@ -13,7 +13,11 @@ class HelloController extends Controller
     {
         $userModel = new User();
         $one = DB::select("select * from users where 1 limit 1");
-        var_dump($one);
+//        var_dump($one);
+        dump($one);
+        dump($one);
+        dump($one);
+        dump($one);
     }
 
 

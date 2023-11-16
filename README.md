@@ -65,14 +65,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## 执行数据表创建脚本 migrate 
+## 1 执行数据表创建脚本 migrate 
 ```php
 php artisan migrate:install
 php artisan migrate
 ```
 visit http://localhost and http://localhost/hello/debug
 
-## 引入debugbar
+## 2 引入debugbar
 ```php
 // 首先 引入依赖
 composer require barryvdh/laravel-debugbar
@@ -82,4 +82,11 @@ composer require barryvdh/laravel-debugbar
         Barryvdh\Debugbar\ServiceProvider::class,
     ])->toArray(),
 
+```
+## 3 定时任务 在workspace中搞
+```php
+//laradock目录中 workspace/crontab/laradock 修改后 rebuild workspace
+* * * * * laradock /usr/bin/php /var/www/php/app/artisan schedule:run >> /dev/null 2>&1
+
+//代码见本次提交
 ```
